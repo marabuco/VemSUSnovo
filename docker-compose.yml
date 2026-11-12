@@ -1,0 +1,14 @@
+services:
+  app:
+    build: { context: .., dockerfile: Dockerfile }
+    env_file: ../backend/.env
+    volumes: [ "vemsus-data:/data" ]
+    restart: unless-stopped
+  caddy:
+    image: caddy:2
+    ports: [ "80:80", "443:443" ]
+    environment: [ "DOMAIN=${DOMAIN}" ]
+    volumes: [ "./Caddyfile:/etc/caddy/Caddyfile:ro", "caddy-data:/data" ]
+    depends_on: [ app ]
+    restart: unless-stopped
+volumes: { vemsus-data: {}, caddy-data: {} }
