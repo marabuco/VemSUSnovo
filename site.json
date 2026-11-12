@@ -1,0 +1,12 @@
+{
+  "title": "VemSUS — Encontre o cuidado certo, mais perto de você",
+  "description": "Encontre uma unidade do SUS no Recife de acordo com o serviço que você precisa. Busca por serviço, mapa e orientações oficiais. Iniciativa independente, com dados da Prefeitura do Recife.",
+  "language": "pt-BR",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": true,
+    "ignoreReducedMotion": false
+  }
+}
