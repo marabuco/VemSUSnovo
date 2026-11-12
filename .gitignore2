@@ -1,0 +1,44 @@
+# ===== Segredos (NUNCA subir) =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ===== Backend (Python) =====
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Banco SQLite gerado pela sincronização (reconstruível via POST /api/admin/sync)
+backend/data/
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== Frontend (Node / Vite) =====
+node_modules/
+dist/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Docker / deploy =====
+deploy/caddy-data/
+docker-compose.override.yml
+
+# ===== Editores e sistema operacional =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
